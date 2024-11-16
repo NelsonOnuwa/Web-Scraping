@@ -63,23 +63,13 @@ print(soup.prettify())                                  #For easier viewing
 
 
 
-#  To scrape the Content from the University of Michigan website using both BeautifulSoup and a Headless Browser (e.g. Selenium)
-# 
-
-# In[5]:
+  To scrape the Content from the University of Michigan website using both BeautifulSoup and a Headless Browser (e.g. Selenium)
+ 
 
 
 pip install selenium
 
-
-# In[6]:
-
-
 pip install webdriver-manager
-
-
-# In[7]:
-
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -90,237 +80,149 @@ from bs4 import BeautifulSoup
 import time
 
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install())) # This sets up the Chrome driver
+9.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install())) 
 
 url = "https://www.si.umich.edu/people/"
 driver.get(url)
 
 
-time.sleep(1)  # this Waits for dynamic content to load
+12. time.sleep(1) 
 
 
-soup = BeautifulSoup(driver.page_source, 'html.parser')# To get the page source after JavaScript has been executed
+13. soup = BeautifulSoup(driver.page_source, 'html.parser')
 
 
-print(soup.prettify()) # To print the formatted HTML
+14. print(soup.prettify()) 
 
 
-driver.quit() # To close the driver
-
-
-# In[ ]:
-
-
-
-
-
-# In[8]:
-
+15. driver.quit() 
 
 print(soup.text)
 
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
+9.  Sets up the Chrome driver
+12. Waits for dynamic content to load
+13. Gets the page source after JavaScript has been executed
+14. Prints the formatted HTML
+15. Closes the driver
 
 
 
 
 
-# In[ ]:
 
 
 
 
 
-#                                Finding an item 
-
-# In[11]:
 
 
-soup.title
 
 
-# In[16]:
+                           Finding an item 
 
+1.soup.title
 
 title= soup.find('title')
 
 print(title.text)
 
 
-# In[17]:
 
-
-soup.span
-
-
-# In[18]:
-
+2.soup.span
 
 span = soup.find("span")
 
 print(span.text)
 
-
-# In[19]:
-
-
 soup.p
 
-
-# In[20]:
-
-
 soup.h2.text
-
-
-# In[21]:
-
 
 soup.div
 
 
-# In[23]:
 
+                        To find the first div tag
 
-div= soup.find('div')  # to find the first div tag
+3.div= soup.find('div') 
 
 print(div.text)
-
-
-# In[ ]:
-
-
-
-
-
-# In[24]:
-
 
 soup.head
 
 
-# In[25]:
-
-
-head = soup.find("head")
+4.head = soup.find("head")
 
 print(head.text)
 
 
-# In[ ]:
 
 
 
 
+                                 Finding all of a particular element
 
-# In[ ]:
+1. To find all the div tags
 
-
-
-
-
-#                    Finding all of a particular element
-
-# In[26]:
+soup.find_all('div')
 
 
-soup.find_all('div') # to find all the div tags
 
 
-# In[27]:
-
-
-head_element = soup.find_all("head")
+2. head_element = soup.find_all("head")
 
 print(head_element)
 
 
-# In[28]:
 
-
-title_element = soup.find_all("title")
+3. title_element = soup.find_all("title")
 
 print(title_element)
 
 
-# In[29]:
 
-
-soup.find_all("span")
-
-
-# In[30]:
-
-
-soup.find_all('p')
-
-
-# In[31]:
-
-
-soup.find_all('h2')
-
-
-# In[ ]:
+4. soup.find_all("span")
 
 
 
 
 
-#                     Finding element by class
-
-# In[ ]:
+5. soup.find_all('p')
 
 
 
 
+6. soup.find_all('h2')
 
-# In[32]:
 
 
-class_element = soup.find('div', class_='body wysiwyg-content')   # to find particular div tags
 
+
+                    Finding element by class
+
+ To find particular div tags
+
+class_element = soup.find('div', class_='body wysiwyg-content')  
 print(class_element.text)
 
 
-# In[33]:
 
-
-class_element2 = soup.find('div', class_='page-crumbs')
+2. class_element2 = soup.find('div', class_='page-crumbs')
 
 class_element2.text
 
 
-# In[34]:
 
-
-class_element1 = soup.find('header', class_="header")
+3. class_element1 = soup.find('header', class_="header")
                           
 class_element1.text.strip()                    
 
 
-# In[ ]:
 
 
 
+                           Finding element by id
 
-
-# In[ ]:
-
-
-
-
-
-#                             Finding element by id
-
-# In[35]:
 
 
 id_element = soup.find('div', id_= 'main')
@@ -328,43 +230,24 @@ id_element = soup.find('div', id_= 'main')
 print(id_element)
 
 
-# In[ ]:
 
 
 
+                            Finding a list
 
 
-# In[ ]:
-
-
-
-
-
-#                      Finding a list
-
-# In[36]:
-
-
-span_title = soup.find(["span","title"])
+1. span_title = soup.find(["span","title"])
 
 print(span_title)
 
 
-# In[ ]:
 
 
-
-
-
-# In[125]:
-
-
-span_title = soup.find_all(["span","title"])
+2. span_title = soup.find_all(["span","title"])
 
 print(span_title)
 
 
-# In[ ]:
 
 
 
