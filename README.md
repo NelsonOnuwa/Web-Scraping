@@ -4,15 +4,15 @@
 
                 To scrape the Content from the University of Michigan website using Requests library
 
- In[1]:
 
 
-import requests                                                                        #imports the requests library.
+
+import requests                                                             -mports the requests library.
 
 
-URL = "https://www.si.umich.edu/people/"                                                #URL of the webpage you want to scrape
+URL = "https://www.si.umich.edu/people/"                                    -URL of the webpage you want to scrape
 page = requests.get(URL)
-page                                                                                    #gets the raw HTML(hypertext markup language) content of the webpage
+page                                                                        -gets the raw HTML(hypertext markup language) content of the webpage
 
     
                          
