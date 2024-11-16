@@ -1,31 +1,31 @@
 
 
-                                       Web Scraping using Python
+ #                                      Web Scraping using Python
 
-#                To scrape the Content from the University of Michigan website using Requests library
+                To scrape the Content from the University of Michigan website using Requests library
 
-# In[1]:
-
-
-import requests                                    #imports the requests library.
+ In[1]:
 
 
-URL = "https://www.si.umich.edu/people/"           #URL of the webpage you want to scrape
+import requests                                                                        #imports the requests library.
+
+
+URL = "https://www.si.umich.edu/people/"                                                #URL of the webpage you want to scrape
 page = requests.get(URL)
-page                                               #gets the raw HTML(hypertext markup language) content of the webpage
+page                                                                                    #gets the raw HTML(hypertext markup language) content of the webpage
 
     
                          
                                                    
 
 
-# In[2]:
+ In[2]:
 
 
 page.status_code
 
 
-# In[3]:
+ In[3]:
 
 
 # A 403 Forbidden error means that the server has refused to allow access to a particular resource, 
