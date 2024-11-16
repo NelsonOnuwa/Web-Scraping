@@ -7,36 +7,30 @@
 
 
 
-import requests                                                             -mports the requests library.
+1.import requests                                                           
 
 
-URL = "https://www.si.umich.edu/people/"                                    -URL of the webpage you want to scrape
-page = requests.get(URL)
-page                                                                        -gets the raw HTML(hypertext markup language) content of the webpage
+2.URL = "https://www.si.umich.edu/people/"                                 
 
+3.page = requests.get(URL)
+
+4.page                                                                  
     
-                         
-                                                   
+5.page.status_code
 
+1. -imports the requests library.
+2. -URL of the webpage you want to scrape
+4. -gets the raw HTML(hypertext markup language) content of the webpage
 
- In[2]:
-
-
-page.status_code
-
-
- In[3]:
-
-
-# A 403 Forbidden error means that the server has refused to allow access to a particular resource, 
+A 403 Forbidden error means that the server has refused to allow access to a particular resource, 
 #often due to permission restrictions
 
 
-#              To scrape the Content from the University of Michigan website using BeautifulSoup 
-# 
-# 
+              To scrape the Content from the University of Michigan website using BeautifulSoup 
+ 
+ 
 
-# In[4]:
+
 
 
 from bs4 import BeautifulSoup                           #Imports the package 
