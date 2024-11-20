@@ -72,13 +72,6 @@ NB
       We can grab the page source using the content attribute.
 6.  For easier viewing
 
-   
-
-
-
-
-
-  
   
                    To scrape the Content from the University of Michigan website using both BeautifulSoup and a Headless Browser (e.g. Selenium)
  
