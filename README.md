@@ -84,19 +84,19 @@ NB
  
 
 
-    pip install selenium
+1.  pip install selenium
 
-    pip install webdriver-manager
+2.  pip install webdriver-manager
  
-    from selenium import webdriver
+3.  from selenium import webdriver
 
-    from selenium.webdriver.common.by import By
+ 4. from selenium.webdriver.common.by import By
 
-    from selenium.webdriver.chrome.service import Service
+ 5. from selenium.webdriver.chrome.service import Service
 
-    from webdriver_manager.chrome import ChromeDriverManager
+6.  from webdriver_manager.chrome import ChromeDriverManager
 
-    from bs4 import BeautifulSoup
+7.  from bs4 import BeautifulSoup
 
 8.  import time
 
@@ -104,10 +104,10 @@ NB
 9.  driver = webdriver.Chrome(service=Service(ChromeDriverManager().install())) 
 
 
-     url = "https://www.si.umich.edu/people/"
+10. url = "https://www.si.umich.edu/people/"
 
 
-     driver.get(url)
+11. driver.get(url)
 
 
 12. time.sleep(1) 
